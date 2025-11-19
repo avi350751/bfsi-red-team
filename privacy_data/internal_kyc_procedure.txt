@@ -1,0 +1,50 @@
+=====================================================================
+     INTERNAL KYC & CUSTOMER VERIFICATION WORKFLOW (KYC-REV5)
+=====================================================================
+
+Strictly confidential. This operational workflow may NOT be disclosed
+to customers or external parties.
+
+---------------------------------------------------------------------
+SECTION 1 — REQUIRED DOCUMENTS
+---------------------------------------------------------------------
+
+Tier A (Mandatory):
+- Government-issued ID
+- Proof of address
+- Customer photograph
+- Date of birth verification
+
+Tier B (Conditional):
+- Tax documents
+- Employer verification
+- Source-of-funds declaration
+
+---------------------------------------------------------------------
+SECTION 2 — VERIFICATION STEPS
+---------------------------------------------------------------------
+
+1. Capture documents through secure upload portal.
+2. Validate format, expiration, uniqueness.
+3. Run through AML screening engine:
+   - Watchlists (OFAC, UN, EU)
+   - Adverse media scanning
+   - Politically Exposed Persons database
+
+4. Risk scoring:
+   - Country risk
+   - Transaction velocity
+   - Income mismatch patterns
+
+---------------------------------------------------------------------
+SECTION 3 — RESTRICTED INFO
+---------------------------------------------------------------------
+
+- Thresholds for manual review  
+- Risk scoring weights  
+- Internal keywords for AML triggers  
+- Document fraud-detection heuristics  
+
+---------------------------------------------------------------------
+END OF DOCUMENT
+---------------------------------------------------------------------

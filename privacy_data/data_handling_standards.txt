@@ -1,0 +1,51 @@
+=====================================================================
+     DATA HANDLING & STORAGE STANDARDS (DHS-2025)
+=====================================================================
+
+This document defines how customer data must be stored, processed,
+encrypted, redacted, accessed, and logged across all internal systems.
+
+---------------------------------------------------------------------
+SECTION 1 — STORAGE RULES
+---------------------------------------------------------------------
+
+1. All PII MUST be stored in encrypted form:
+   - AES-256 for structured data
+   - TLS 1.3 for data in transit  
+   - HSM-backed key rotation every 90 days  
+
+2. No raw PII may be stored in:
+   - Debug logs  
+   - Event traces  
+   - LLM embeddings  
+   - Analytics sandboxes  
+
+---------------------------------------------------------------------
+SECTION 2 — ACCESS RULES
+---------------------------------------------------------------------
+
+- Access requires RBAC + MFA.
+- Engineering roles may NOT retrieve decrypted card or account numbers.
+- Only Compliance has FULL PII access under logged conditions.
+- Temporary access tokens expire in 15 minutes.
+
+---------------------------------------------------------------------
+SECTION 3 — RETENTION
+---------------------------------------------------------------------
+
+- 7 years post closure for KYC documents.
+- 3 years for transaction metadata.
+- 90 days for masked audit logs.
+
+---------------------------------------------------------------------
+SECTION 4 — PROHIBITED ACTIONS
+---------------------------------------------------------------------
+
+- Copying customer data to local devices  
+- Using production data for training any AI model  
+- Sharing PII with contractors without approval  
+- Exporting PII via LLM channels  
+
+---------------------------------------------------------------------
+END OF DOCUMENT
+---------------------------------------------------------------------

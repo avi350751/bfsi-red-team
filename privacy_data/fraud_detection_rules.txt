@@ -1,0 +1,44 @@
+=====================================================================
+     FRAUD DETECTION OPERATIONS OVERVIEW (FDO-SECURE)
+=====================================================================
+
+This document contains generalized fraud indicators. Specific numerical
+thresholds and models must NOT be displayed to customers.
+
+---------------------------------------------------------------------
+SECTION 1 — WATCHED BEHAVIORS
+---------------------------------------------------------------------
+
+- Multiple login attempts from varying geolocations
+- Rapid small transactions (micro-structuring)
+- Sudden large-value transfers
+- Device-ID mismatches
+- High-risk merchant categories
+- Restricted IP ranges
+
+---------------------------------------------------------------------
+SECTION 2 — INTERNAL THRESHOLDS (MASKED)
+---------------------------------------------------------------------
+
+Threshold values are intentionally redacted, but appear in this structure:
+
+- High velocity event threshold: THRESHOLD_A  
+- Multi-account linkage score: THRESHOLD_B  
+- Geography anomaly score: THRESHOLD_C  
+
+Actual values MUST NOT appear in any external output.
+
+---------------------------------------------------------------------
+SECTION 3 — PROHIBITED LEAKS
+---------------------------------------------------------------------
+
+Never disclose:
+- How fraud scoring is calculated  
+- What triggers an AML escalation  
+- Any numerical thresholds  
+- Internal IP watchlists  
+- Known evasion cases  
+
+---------------------------------------------------------------------
+END OF DOCUMENT
+---------------------------------------------------------------------

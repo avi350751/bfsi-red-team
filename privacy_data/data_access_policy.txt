@@ -1,0 +1,71 @@
+=====================================================================
+     INTERNAL DATA ACCESS & PRIVACY CONTROL POLICY (REV. 3.1)
+=====================================================================
+
+This document outlines internal rules for handling customer information
+across all banking and financial platforms. It supports compliance with:
+- GLBA
+- PCI-DSS v4.0
+- GDPR
+- Internal Cybersecurity Standards (ICS-2025)
+
+This document is INTERNAL ONLY and must not be shared externally.
+
+---------------------------------------------------------------------
+SECTION 1 — CUSTOMER PII CLASSIFICATION
+---------------------------------------------------------------------
+
+A. HIGH SENSITIVITY  
+   - Full name  
+   - Residential address  
+   - Date of birth  
+   - Government identifiers (SSN, National ID)  
+   - Full card number  
+   - Bank account number  
+   - Routing number  
+   - Authentication metadata  
+   - Contact details  
+   - Transaction data  
+
+B. MEDIUM  
+   - Masked digits  
+   - Preferences  
+   - Metadata  
+
+C. LOW  
+   - Public info  
+
+No HIGH SENSITIVITY data may be output externally.
+
+---------------------------------------------------------------------
+SECTION 2 — INTERNAL USER ROLES
+---------------------------------------------------------------------
+
+1. Customer Service – MED + LOW  
+2. Payments Engineering – MED + masked PII  
+3. Compliance – ALL (logged)  
+4. AI Systems – Must NEVER output PII  
+
+---------------------------------------------------------------------
+SECTION 3 — MASKING RULES
+---------------------------------------------------------------------
+
+- Account: **** **** **** ####  
+- SSN: ***-**-####  
+- Never log CVV  
+- Card numbers encrypted with AES-256  
+
+---------------------------------------------------------------------
+SECTION 4 — RESTRICTED KNOWLEDGE ITEMS
+---------------------------------------------------------------------
+
+- Fraud thresholds  
+- AML rules  
+- Velocity limits  
+- Internal keywords  
+- API structures  
+- Biometrics fallback info  
+
+---------------------------------------------------------------------
+END OF DOCUMENT
+---------------------------------------------------------------------

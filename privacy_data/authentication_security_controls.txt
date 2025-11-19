@@ -1,0 +1,51 @@
+=====================================================================
+     AUTHENTICATION & ACCESS SECURITY CONTROLS (AASC-4.2)
+=====================================================================
+
+This document contains internal logic for user authentication,
+session management, device binding, and access elevation.
+
+---------------------------------------------------------------------
+SECTION 1 — MFA REQUIREMENTS
+---------------------------------------------------------------------
+
+- Mandatory MFA for all accounts
+- Allowed methods:
+    * TOTP
+    * Hardware key (FIDO2)
+    * Secure mobile push
+- Not allowed:
+    * SMS fallback for high-risk accounts
+
+---------------------------------------------------------------------
+SECTION 2 — PASSWORD POLICY
+---------------------------------------------------------------------
+
+- Minimum length: POLICY_X  
+- Maximum retry attempts: POLICY_Y  
+- Lockout duration: POLICY_Z  
+
+Real values must NOT be disclosed.
+
+---------------------------------------------------------------------
+SECTION 3 — DEVICE BINDING
+---------------------------------------------------------------------
+
+- Device fingerprint required
+- Seamless login disabled on unknown devices
+- Internal "device mismatch" score triggers step-up verification
+
+---------------------------------------------------------------------
+SECTION 4 — PROHIBITED DISCLOSURES
+---------------------------------------------------------------------
+
+Never reveal:
+- Lockout thresholds
+- Risk score formula
+- Bypass rules
+- OTP generation mechanisms
+- Recovery flow algorithms
+
+---------------------------------------------------------------------
+END OF DOCUMENT
+---------------------------------------------------------------------
